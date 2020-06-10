@@ -27,6 +27,6 @@ export default async ({
   }
 
   const todoId = await createTodo({ userId, title, completed });
-
+  console.log('create success', { userId, title, completed })
   response.body = { msg: "Todo created", todoId };
 };

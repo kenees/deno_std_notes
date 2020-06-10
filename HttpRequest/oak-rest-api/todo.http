@@ -1,9 +1,30 @@
+### 功能验证
 ### 获取Todo列表
 GET http://localhost:8080/todos HTTP/1.1
 
 ### 获取Todo详情
+
 GET http://localhost:8080/todos/${todoId}
 
 ### 新增Todo
 
-POST http://localhost:8080
+POST http://localhost:8080/todos HTTP/1.1
+content-type: application/json
+
+{
+  "userId": 666,
+  "title": "Learn Deno"
+}
+
+### 更新Todo
+PUT http://localhost:8080/todos/${todoId} HTTP/1.1
+content-type: application/json
+
+{
+  "userId": 666,
+  "title": "Learn Deno",
+  "completed": true
+}
+
+### 删除Todo
+DELETE http://localhost:8080/todos/${todoId} HTTP/1.1

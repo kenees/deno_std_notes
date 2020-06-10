@@ -1,5 +1,5 @@
 import { Response, RouteParams } from 'https://deno.land/x/oak/mod.ts';
-import { getTodos } from '../services/todos.ts';
+import { getTodo } from '../services/todos.ts';
 
 export default async ({
   params,
